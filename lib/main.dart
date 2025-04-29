@@ -129,15 +129,11 @@ class _loginpageState extends State<loginpage> {
                         });
                         email.clear();
                         pass.clear();
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Login Succesfully")),
+                        );
                       }
-
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text("Login Succesfully")),
-                      );
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => loginpage()),
-                      );
                     },
                     child: Text("Login"),
                   ),
